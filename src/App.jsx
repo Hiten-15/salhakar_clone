@@ -1,0 +1,17 @@
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LandingPage from './pages/LandingPage';
+
+function App() {
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<LandingPage />} />
+                {/* Catch all route - redirect to home */}
+                <Route path="*" element={<LandingPage />} />
+            </Routes>
+        </Router>
+    );
+}
+
+export default App;
